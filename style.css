@@ -1,0 +1,127 @@
+:root {
+    --primary: #6C63FF;
+    --success: #2ecc71;
+    --danger: #e74c3c;
+    --light: #f4f4f4;
+    --white: #ffffff;
+    --text: #333333;
+    --border: #dddddd;
+}
+body {
+    background-color: var(--light);
+    font-family: sans-serif;
+}
+#main{
+    text-align: center;
+    max-width: 500px;
+    padding: 20px;
+    margin: 50px auto;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+h1 {
+    color: var(--primary);
+}
+#task-input{
+    width: 65%;
+    padding: 10px;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+#task-input:focus {
+    border-color: var(--primary);   
+}
+#add-btn{
+    background-color: var(--primary);
+    padding:  10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    cursor: pointer;   
+    font-size: 14px;
+}
+#add-btn:hover {
+    background-color: #574fd6;      
+}
+#task-counter {
+    color: grey;
+    font-size: 13px;
+}
+#filters {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+.filter-btn{
+    padding: 8px 15px;
+    border: 2px solid var(--border);
+    border-radius: 20px; 
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--text);
+    font-size: 13px;
+}
+.filter-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+.filter-btn[data-filter="all"].active {
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+.filter-btn[data-filter="active"]{
+    background-color: #f39c12;     
+    color: var(--white);
+    border-color: #f39c12;
+}
+.filter-btn[data-filter="completed"]{
+    background-color: var(--success);
+    color: var(--white);
+    border-color: var(--success);
+}
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+#task-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--white);
+    text-align: left;
+}
+
+#task-list li span {
+    flex: 1;                
+    font-size: 14px;
+    color: var(--text);
+}
+
+#task-list li input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: var(--primary); 
+}
+
+#task-list li button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px;
+}
+
+#task-list li button:hover {
+    transform: scale(1.2); 
+}
